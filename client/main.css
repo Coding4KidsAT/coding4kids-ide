@@ -1,0 +1,27 @@
+.col-md-4{
+	margin-top: -10px;
+  	padding: 20px;
+	outline: 2px solid #ccc;
+	min-height: 500px;
+	height: 569px;
+	display: table-cell;
+	vertical-align: top;
+	float: none;
+}
+
+.row {
+	display: table;
+	width: 102.2%;
+	min-height: 580px;
+}
+.panel.panel-success {
+	font-size: 14px;
+}
+
+.home-page{
+	background-color: rgba(24, 41, 54, 0.9);
+}
+
+h8{
+	color: lightcyan;
+}

@@ -1,0 +1,40 @@
+<template name="editSettingsModal">
+	<div class="modal fade bs-example-modal-sm" id="editSettingsModal" >
+		<div class="modal-dialog model-sm create-new">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title"> 
+						<span class="glyphicon glyphicon-user" aria-hidden="true">
+						</span> Settings
+					</h4>
+				</div>
+				<div class="modal-body">
+					{{>modal_errors}}
+					<div class="form-group">	
+						<h4 class="modal-title">Select the editor theme</h4>
+
+						<div class="radio">
+							<label>
+								<input type="radio" name="theme" value="monokai" {{checked "monokai"}}/>
+								Monokai
+							</label>
+						</div>
+						<div class="radio">
+							<label>
+								<input type="radio" name="theme" value="chrome" {{checked "chrome"}}/>
+								Chrome
+							</label>
+						</div>
+					</div>					
+				</div>
+				<div class="modal-footer"> 
+					<div class="form-group">
+						<button type="button" class="btn btn-primary btn-save">Save </button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel </button>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</template>

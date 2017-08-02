@@ -1,0 +1,38 @@
+<template name="main">
+	<div class="container-fluid home-page">
+		<div class="row">
+			<div class="col-md-4">
+				<h8>My projects</h8>
+				{{#if currentUser}}
+					{{> projectsList}}
+				{{/if}}
+			</div>
+			<div class="col-md-4">
+				
+				<h8>Public projects</h8>
+				<div class="dropdown pull-right">
+					<button class="btn btn-success btn-xs dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> Sort 
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						<li><a href="#" class="popular-sort">Most Viewed</a></li>
+						<li><a href="#" class="recent-sort">Most Recent</a></li>
+					</ul>
+				</div>
+
+				{{> otherProjects sort=verifySort}}
+			</div>
+			{{#if isInRole 'admin'}}
+				<div class="col-md-4">
+					<h8>All projects</h8>
+					{{>allProjects}}
+				</div>
+			{{else}}
+				<div class="col-md-4">
+					<h8>Featured projects</h8>
+					{{>featuredProjects}}
+				</div>
+			{{/if}}
+		</div>
+	</div>
+</template>

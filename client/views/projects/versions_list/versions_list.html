@@ -1,0 +1,9 @@
+<template name="versionList">
+	<ul class="versions list-unstyled">
+		{{#each project.versions}}
+			<li>
+				{{> version date=date content=content versionNumber=version}} 
+			</li>
+		{{/each}}
+	</ul>
+</template>

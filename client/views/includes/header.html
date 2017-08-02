@@ -1,0 +1,36 @@
+<template name="header">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">PLINKER</a>
+			</div>
+			<div class="navbar-form navbar-left">
+				{{#if currentUser}}
+					<button type="button" class="btn btn-success btn-new" data-toggle="tooltip" title="Start a new project" data-placement="right">
+						<span class="glyphicon glyphicon-file" aria-hidden="true"></span> New
+					</button>
+					{{#if project}}
+						<button type="button" class="btn btn-primary btn-template" data-toggle="tooltip" title="Fork the current project" data-placement="right"> 
+							<span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Fork
+						</button>
+						{{#if userMayEditProject}}
+							<button type="button" class="btn btn-default btn-save" data-toggle="tooltip" title="Save" data-placement="right">
+							<span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>  Save
+							</button>
+							<button type="button" class="btn btn-primary btn-info btn-new-editor" data-toggle="tooltip" title="Add new editor" data-placement="right"> 
+								<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Editor
+							</button>
+						{{/if}}
+					{{/if}}
+				{{/if}}
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				{{> loginButtons}}
+			</ul>
+			{{#if currentUser}}
+				<img src="{{profilePicture}}" class="img-circle picture-in-header navbar-right">
+			{{/if}}
+		</div>
+	</nav>
+</template>
+

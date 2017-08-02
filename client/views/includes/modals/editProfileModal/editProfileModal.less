@@ -1,0 +1,72 @@
+#editProfileModal{
+	
+	.img{
+		width:180px;
+	}
+
+	div#webcam {
+		position: relative;
+		margin:0 auto;
+	}
+
+	.btn-save{
+		---position: relative;
+		---left: 350px;
+		---width: 67px;
+	}
+
+	.btn-edit-picture{
+
+		position: relative;
+		left: 350px;
+	}
+	.btn-save-photo{
+		width: 67px;
+	}
+
+	.btn-snap{
+		position: relative;
+		left:161px;
+	}
+
+
+	.modal-content{
+		.profile{
+			.takePicture {
+				display: none;
+			}
+		}
+		.profile.webcamOn{
+			.takePicture {
+				display: block;
+			}
+
+			.viewPicture {
+				display: none;
+			}
+		}
+
+	}
+
+	.profile{
+		.viewPicture{
+			.defaultPicture {
+				display: none;
+			}
+		}
+		.viewPicture.webcamOn{
+			.userPicture {
+				display: none;
+			}
+
+			.defaultPicture {
+				display: block;
+			}
+		}
+
+	}
+
+	.defaultPicture{
+		
+	}
+}

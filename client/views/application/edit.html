@@ -1,0 +1,135 @@
+<template name="edit">
+
+	<div class="ui-layout-container-fluid">
+
+		<div class="ui-layout-center">
+			{{> sharejsAce docid=docId onRender=configAce onConnect=setMode id="editor"}}
+			{{!-- <div class="container"></div> --}}
+		</div>
+
+
+		<div class="ui-layout-east">
+			<div class="preview">
+				<div class="btn-group btn-reload-preview" role="group">
+					<button type="button" class="btn btn-primary btn-sm btn-reload">
+						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-primary btn-sm btn-preview">
+						<span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-success btn-sm btn-play">
+						<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+					</button>
+					<button type="button" class="btn btn-default btn-sm btn-stop">
+						<span class="glyphicon glyphicon-pause" aria-hidden="true"></span>
+					</button>
+				</div>
+				<iframe id="myResult" src="{{pathFor 'run' _id=project._id filename='index.html'}} "></iframe>
+			</div>
+		</div>
+
+		<div class="ui-layout-west">
+			<div id="main" class="row-fluid">
+
+				<div class="toggle-editor">
+					<div class="display">
+						{{#if userMayEditProject}}
+							<a href="#" class="start-edit pull-right" data-toggle="tooltip" data-placement="bottom" title="Edit">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+							</a>
+						{{/if}}
+						{{project.name}}
+					</div>
+					<div class="edit">
+						<form class="form-inline edit-name">
+							<div class="input-group">
+								<input type="text" class="form-control input-sm input-text" name="name" id="editField" placeholder="Project Name" value="{{project.name}}"/>
+								<span class="input-group-btn">
+									<button type="submit" class="btn btn-primary btn-sm" >
+										<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+									</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				<h3>
+					Files
+				</h3>
+					{{> filesList}}
+
+				{{#if userMayEditProject}}
+					<h4>New File</h4>
+					<form class="form-inline newfile">
+						{{> errors}}
+						<div class="input-group">
+							<input type="text" class="form-control input-sm" name= "filename" id="filename" placeholder="File Name" />
+							<span class="input-group-btn">
+								<button type="submit" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add">
+									<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</form>
+				{{/if}}
+
+				<div class="toggle-editor">
+					<div class="display">
+						{{#if userMayEditProject}}
+							<a href="#" class="start-edit pull-right" data-toggle="tooltip" data-placement="bottom" title="Edit">
+								<span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+							</a>
+						{{/if}}
+						<h4>Description</h4>
+						{{#if project.description}}
+							<p>{{project.description}}</p>
+						{{else}}
+							{{#if userMayEditProject}}
+								<a href="#" class="start-edit description">Add a description</a>
+							{{/if}}
+						{{/if}}
+					</div>
+					<div class="edit">
+						<h4>Description</h4>
+						<form class="form description">
+							<div class="form-group">
+								<textarea class="form-control project-description" name="project-description">{{project.description}}</textarea>
+							</div>
+							<div class="save">
+								<button type="submit" class="btn btn-default">Save</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="list-the-versions">
+					{{#if userMayEditProject}}
+						<h4>Versions</h4>
+						{{>versionList}}
+					{{/if}}
+				</div>
+
+				{{#if previewVersionIsOn}}
+					<div class="close-preview">
+						<button type="button" class="btn btn-info btn-close-version btn-block">
+							<span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span> Close Preview
+						</button>
+					</div>
+				{{/if}}
+				{{#if userMayEditProject}}
+					<div class="public-buttons">
+						<button type="button" class="btn btn-success btn-public btn-block">
+							<span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Save &amp; Publish
+						</button>
+					</div>
+					<div class="publish-remove">
+						{{#if versionIsSetPublic}}
+							<button type="button" class="btn btn-danger btn-non-public btn-block" >
+								<span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span> Unpublish
+							</button>
+						{{/if}}
+					</div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>

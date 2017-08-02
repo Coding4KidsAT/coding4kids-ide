@@ -1,0 +1,14 @@
+<template name="modal_errors">
+  <div class="modal_errors row-fluid">
+    {{#each modal_errors}}
+      {{> modal_error}}
+    {{/each}}
+  </div>
+</template>
+
+<template name="modal_error">
+  <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    {{message}}
+  </div>
+</template>

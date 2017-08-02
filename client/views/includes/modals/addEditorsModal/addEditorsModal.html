@@ -1,0 +1,32 @@
+<template name="addEditorsModal">
+	<div class="modal fade bs-example-modal-lg" id="addEditorsModal" >
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">Add new editors to your project </h4>
+				</div>
+				
+				<div class="modal-body">
+					<div class="row">
+					 	{{#each users}}
+							<div class="col-xs-1 col-md thumbnail {{editorSelected ..}}" data-id="{{_id}}">
+					    	  	<img src="{{profilePicture}}" class="img-rounded">
+						    	<div class="caption">
+									<h7 class="wrapword">{{name}}</h7>
+								</div>
+								<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+							</div>
+						{{/each}}
+					</div>
+				</div>
+				<div class="modal-footer"> 
+					<div class="form-group">
+						<button type="button" class="btn btn-primary btn-ok">Ok</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel </button>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</template>

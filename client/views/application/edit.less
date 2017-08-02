@@ -1,0 +1,212 @@
+.ui-layout-container-fluid
+{
+	position: absolute;
+	top: 52px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-sizing: border-box;
+	min-width: 100%;
+	----min-height: 100%;
+	width: 198px;
+	----height: 100%;
+	display: block;
+
+
+}
+
+.ui-layout-center.ui-layout-pane {
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+
+	
+}
+
+.ui-layout-east.ui-layout-pane {
+	padding: 0;
+	height: 100%;
+
+}
+
+.ui-layout-east {
+
+	.preview {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	iframe {
+		border: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+div#editor {
+	height: 100%
+}
+
+
+.form-inline .alert-error{
+	font-size: 13px;
+}
+
+.ui-layout-west .form-inline .errors {
+  	width: 170px;
+	font-size: 13px;
+}
+
+.ui-layout-west .input-group{
+	width: 100%;
+}
+
+input#desc{
+	min-height: 65px;
+}
+
+
+.ui-layout-east .btn-reload{
+	background-color: rgb(108, 225, 106);
+	border: none;
+} 
+
+
+.ui-layout-east .btn-preview, .btn-play, .btn-stop{
+	border: none;
+} 
+
+.ui-layout-west .file:hover{
+	background-color: #eeeeee;
+}
+
+.btn-reload-preview{
+	display: block;
+	height: 28px;
+	background-color: lightgray;
+	position: absolute;
+	right: 24px;
+	z-index: 1000;
+	box-shadow: 0 2px 4px rgba(0, 105, 250, 0.48);
+
+}
+
+
+
+.title{
+	font-size:15px;
+	font-weight:bold;
+	position:relative;
+	top:10px;
+}
+
+.ui-layout-west {
+	.toggle-editor {
+		.edit {
+			display: none;
+		}
+	}
+	.toggle-editor.editing {
+		.edit {
+			display: block;
+		}
+
+		.display {
+			display: none;
+		}
+	}
+}
+
+.ui-layout-east{
+
+	.btn-group {
+		.btn-play {
+			display: none;
+		}
+	}
+	.btn-group.autoplay{
+		.btn-play {
+			display: block;
+		}
+
+		.btn-stop {
+			display: none;
+		}
+	}
+
+}
+
+.ui-layout-west .input-text{
+	width: 120px;
+	font-size:15px;
+}
+
+.ui-layout-west .display button {
+
+	background: none;
+	border: none;
+	margin: 0;
+	display: none;
+}
+
+.glyphicon.glyphicon-pencil{
+	display: none;
+}
+
+.ui-layout-west .toggle-editor:hover .glyphicon.glyphicon-pencil{
+	display: block;
+	font-size: 15px;
+}
+
+.ui-layout-west a.start-edit{
+	font-size: 15px;
+}
+
+p{
+	font-size: 14px;
+}
+
+h4,h3{
+	font-size: 15px;
+	font-weight: bold;	
+}
+
+.ui-layout-west {
+	.files{
+		font-size: 16px;
+	}
+	.btn-public, .btn-close-version{
+		margin-bottom: 5px;
+	}
+}
+
+.thumbnail img{
+	height: 80px;
+}
+
+
+.versions {
+	max-height: 105px;
+	min-width:177px; 
+	width:auto;
+	overflow: auto;
+	position: relative;
+}
+
+.ui-layout-west .single-version:hover{
+	background-color: #eeeeee;
+}
+
+div.single-version {
+	line-height: 170%;
+}

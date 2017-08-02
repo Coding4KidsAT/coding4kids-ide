@@ -1,0 +1,46 @@
+<template name="editProfileModal">
+	<div class="modal fade bs-example-modal-sm" id="editProfileModal" >
+		<div class="modal-dialog model-sm create-new">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title"> 
+						<span class="glyphicon glyphicon-user" aria-hidden="true">
+						</span> Settings
+					</h4>
+				</div>
+				<div class="modal-body profile">
+					{{>modal_errors}}
+					<div class="form-group">	
+						<h4 class="modal-title">Edit your profile name</h4>
+						<input type="text" class="form-control input" id="edited-user-name" name="edited-user-name" value="">
+					</div>
+					<h4 class="modal-title"> Profile picture</h4>
+					<div class="viewPicture">
+						
+						<div class="userPicture">
+							<img src="{{profilePicture}}" class="img-circle center-block">
+						</div>
+						<div class="defaultPicture"></div>
+						
+						<div class="editPicture">
+							<button type="button" class="btn btn-success btn-edit-photo btn-edit-picture"> 
+								<span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Edit 
+							</button>
+						</div>
+					</div>
+					<div class="takePicture">
+						{{>camera}}
+					</div>
+					
+				</div>
+				<div class="modal-footer"> 
+					<div class="form-group">
+						<button type="button" class="btn btn-primary btn-save">Save </button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">Cancel </button>
+					</div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+</template>

@@ -1,0 +1,29 @@
+<template name="deleteProjectModal">
+  <div class="modal fade bs-example-modal-sm" id="deleteProjectModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content message">
+        
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title"> Delete the project</h4>
+        </div>
+        
+        <div class="modal-body">
+          <p>   Are you sure that you would like to delete {{projectToDelete}} ?</p>
+        </div>
+
+        <div class="modal-footer"> 
+
+          <form class="form confirm" id="confirm">
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#basicModal">Yes</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">No </button>
+            </div>
+          </form>
+          
+        </div>
+      
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+</template>

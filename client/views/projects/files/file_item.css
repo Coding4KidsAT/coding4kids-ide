@@ -1,0 +1,25 @@
+.file-content.selected {
+	background-color: lightblue;
+	
+}
+
+
+button.btn-delete-file {
+
+	background: none;
+	border: none;
+	margin: 0;
+	position: absolute;
+  	right: 5px;
+ 	display: none;
+}
+
+
+.file:hover button.btn.btn-default.btn-xs {
+	display: inline-block;
+}
+
+button.btn.btn-default.btn-xs:hover {
+
+	color: red;
+}

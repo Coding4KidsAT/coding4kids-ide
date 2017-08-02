@@ -1,0 +1,20 @@
+<template name="version">
+	<div class="single-version">
+		{{#if versionIsPublic}}
+			<span class="glyphicon glyphicon-globe" aria-hidden="true"></span> 			
+		{{/if}}
+
+		<button type="button" class="btn btn-default btn-xs btn-delete-version pull-right" data-toggle="tooltip" data-placement="left" title="Delete">				
+			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+
+		<button type="button" class="btn btn-default btn-xs btn-preview-version pull-right" data-toggle="tooltip" data-placement="left" title="Preview">				
+			<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+		</button>
+
+		<a href="#" class="edit-version"> Saved {{savedDate}}</a>
+	</div>
+</template>
+
+
+

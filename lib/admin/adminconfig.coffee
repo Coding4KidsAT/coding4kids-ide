@@ -1,0 +1,3 @@
+@AdminConfig = 
+	name: 'Dreamicode'
+	collections: {}

@@ -1,0 +1,7 @@
+<template name="filesList">
+	<div class="files">
+		{{#each project.files}}
+			{{> fileItem filename=filename _id=../project._id}} 
+		{{/each}}
+	</div>
+</template>

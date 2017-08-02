@@ -1,0 +1,17 @@
+<template name="fileItem">
+	<div class="file">
+		<div class="file-content {{selected ../../filename}}">
+			<a href="{{pathFor 'editFile'}}">{{filename}}</a>
+			{{#if userIsThisProjectEditor}}
+				{{#if notIndexHtmlFile}}
+					<button type="button" class="btn btn-default btn-xs btn-delete-file" data-toggle="tooltip" data-placement="top" title="Delete this file">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+				{{/if}}
+			{{/if}}
+		</div>
+	</div>
+</template>
+
+
+
