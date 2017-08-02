@@ -43,8 +43,10 @@ Template.project.helpers({
 
 	editorsPictures: function(){
 
-		if(typeof Meteor.users.find({"_id":this.valueOf()}).fetch()[0].profile.picture === 'string'){
-			return Meteor.users.find({"_id":this.valueOf()}).fetch()[0].profile.picture;
+		const user = Meteor.users.find({"_id":this.valueOf()}).fetch()[0];
+
+		if(user && user.profile && typeof user.profile.picture === 'string'){
+			return user.profile.picture;
 		}else {
 			return "/img/placeholder_female_small.jpg";
 		}
