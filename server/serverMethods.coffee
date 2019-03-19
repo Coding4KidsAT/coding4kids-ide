@@ -1,4 +1,4 @@
-{ ShareJS } = require 'meteor/mizzao:sharejs'
+{ ShareJS } = require 'meteor/edemaine:sharejs'
 
 Meteor.methods
 	newProject: (projectName,projectDescription) ->

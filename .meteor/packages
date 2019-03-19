@@ -10,7 +10,6 @@ iron:router
 mizzao:bootstrap-3
 underscore@1.0.10
 coffeescript
-mizzao:sharejs
 manuel:viewmodel
 peppelg:bootstrap-3-modal
 less@2.7.9
@@ -37,5 +36,5 @@ standard-minifier-js@2.1.1
 shell-server
 facebook-config-ui
 dynamic-import
-mizzao:sharejs-codemirror
-mizzao:sharejs-ace
+edemaine:sharejs
+edemaine:sharejs-ace

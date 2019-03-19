@@ -1,4 +1,4 @@
-import { ShareJS } from 'meteor/mizzao:sharejs';
+import { ShareJS } from 'meteor/edemaine:sharejs';
 
 Meteor.methods({
 
