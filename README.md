@@ -39,3 +39,9 @@ meteor --settings settings.json
 ## License
 
 MIT
+
+## Supported by …
+
+![Supported by a netidee grant](https://raw.githubusercontent.com/Coding4KidsAT/coding4kids-ide/master/public/netidee-Logo.png)
+
+This project is supported by a netidee grant from the Internet Foundation Austria.
